@@ -15,15 +15,16 @@ const featured = [
     image: "/images/brew-co2.png", // replace with your screenshot
     emoji: "☕",
     accent: "#378ADD",
-    live: "https://brew-and-co-acyz-l1v0jmxri-patanai12876s-projects.vercel.app/",
+    live: "https://brew-and-co-acyz.vercel.app/",
     case: "#",
   },
   {
     id: 2,
     name: "FitPro",
     description:
-      "A fitness platform focused on seamless UX, workout management, and progress tracking — built with performance and scalability in mind.",
-    tags: ["Next.js", "TypeScript", "Mongo DB"],
+      "A fitness platform focused on seamless UX, workout management, services, trainers and membership plans — built with performance and scalability in mind.",
+    tags: ["Next.js", "Node.js", "TypeScript", "Mongo DB" , 
+    ],
     image: "/images/fitpro.png", // replace with your screenshot
     emoji: "💪",
     accent: "#185FA5",
@@ -36,7 +37,7 @@ const others = [
   {
     name: "TradeSync",
     description:
-      "Trading analytics and journaling application for tracking performance and patterns.",
+      "Trading analytics and a copy trading platform to copy Experienced traders based on their performance.",
     tags: ["Next.js", "TypeScript", "Tailwind CSS"],
     image: "/images/tradesync.png", // replace with your screenshot
     emoji: "📈",

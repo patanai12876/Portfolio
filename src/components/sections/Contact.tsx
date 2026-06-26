@@ -10,7 +10,7 @@ const socials = [
   {
     icon: <Mail size={18} />,
     label: "GitHub",
-    handle: "github.com/webdecoded",
+    handle: "github.com",
     href: "https://github.com/patanai12876",
   },
   {
