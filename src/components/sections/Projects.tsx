@@ -8,38 +8,46 @@ import { ExternalLink, BookOpen } from "lucide-react";
 const featured = [
   {
     id: 1,
-    name: "Brew & Co",
+    name: "Evoo",
     description:
-      "A modern coffee brand website with smooth animations, an elegant menu showcase, and a fully responsive layout built for a premium user experience.",
-    tags: ["Next.js", "Framer Motion" , "POstgre SQL" , "Prisma"],
-    image: "/images/brew-co2.png", // replace with your screenshot
-    emoji: "☕",
-    accent: "#378ADD",
-    live: "https://brew-and-co-acyz.vercel.app/",
+      "An EV company website built out of frustration with ordinary commute, designed to highlight smart mobility with a bold, modern experience.",
+    tags: ["Next.js", "Tailwind CSS", "Framer Motion"],
+    image: "/images/evoo.png",
+    emoji: "⚡",
+    accent: "#1E88E5",
+    live: "https://evoo-one.vercel.app/",
     case: "#",
   },
   {
     id: 2,
-    name: "FitPro",
+    name: "Brew & Co",
     description:
-      "A fitness platform focused on seamless UX, workout management, services, trainers and membership plans — built with performance and scalability in mind.",
-    tags: ["Next.js", "Node.js", "TypeScript", "Mongo DB" , 
-    ],
-    image: "/images/fitpro.png", // replace with your screenshot
-    emoji: "💪",
-    accent: "#185FA5",
-    live: "https://fit-pro-frontend.vercel.app/",
+      "A modern coffee brand website with smooth animations, an elegant menu showcase, and a fully responsive layout built for a premium user experience.",
+    tags: ["Next.js", "Framer Motion", "PostgreSQL", "Prisma"],
+    image: "/images/brew-co2.png",
+    emoji: "☕",
+    accent: "#378ADD",
+    live: "https://brew-and-co-acyz.vercel.app/",
     case: "#",
   },
 ];
 
 const others = [
   {
+    name: "FitPro",
+    description:
+      "A fitness platform focused on seamless UX, workout management, services, trainers and membership plans — built with performance and scalability in mind.",
+    tags: ["Next.js", "Node.js", "TypeScript", "MongoDB"],
+    image: "/images/fitpro.png",
+    emoji: "💪",
+    live: "https://fit-pro-frontend.vercel.app/",
+  },
+  {
     name: "TradeSync",
     description:
-      "Trading analytics and a copy trading platform to copy Experienced traders based on their performance.",
+      "Trading analytics and a copy trading platform to copy experienced traders based on their performance.",
     tags: ["Next.js", "TypeScript", "Tailwind CSS"],
-    image: "/images/tradesync.png", // replace with your screenshot
+    image: "/images/tradesync.png",
     emoji: "📈",
     live: "https://trade-sync-seven.vercel.app/",
   },
@@ -47,8 +55,8 @@ const others = [
     name: "Ignisis Solutions",
     description:
       "Business website focused on services showcase and lead generation for a digital agency.",
-    tags: ["Next.js", "Tailwind CSS" , "Resend"],
-    image: "/images/ignisis.png", // replace with your screenshot
+    tags: ["Next.js", "Tailwind CSS", "Resend"],
+    image: "/images/ignisis.png",
     emoji: "🏢",
     live: "https://ignisissolutions-phi.vercel.app/",
   },
