@@ -3,29 +3,39 @@
 
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { Code2, Layers, Zap } from "lucide-react";
-
-
+import {
+  TrendingUp,
+  Lightbulb,
+  Target,
+} from "lucide-react";
 
 export default function About() {
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
-    const values = [
-  {
-    icon: <Code2 size={18} />,
-    title: "Clean Code",
-    description: "Every line written with clarity and maintainability in mind.",
-  },
-  {
-    icon: <Layers size={18} />,
-    title: "Scalable Architecture",
-    description: "Solutions built to grow with your business needs.",
-  },
-  {
-    icon: <Zap size={18} />,
-    title: "Fast Delivery",
-    description: "Efficient workflows without compromising on quality.",
-  },
-];
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  const values = [
+    {
+      icon: <TrendingUp size={18} />,
+      title: "Growth Focused",
+      description:
+        "Every solution is designed with one goal in mind — helping your business grow, compete, and scale.",
+    },
+    {
+      icon: <Lightbulb size={18} />,
+      title: "Smart Solutions",
+      description:
+        "Combining business strategy, web technology, and SaaS development to solve real business challenges.",
+    },
+    {
+      icon: <Target size={18} />,
+      title: "Results Driven",
+      description:
+        "From strategy to execution, every project is focused on creating measurable value for your business.",
+    },
+  ];
+
   return (
     <section
       id="about"
@@ -49,10 +59,17 @@ export default function About() {
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
+            transition={{
+              duration: 0.65,
+              ease: [0.16, 1, 0.3, 1],
+            }}
           >
             <div className="flex items-center gap-3 mb-4">
-              <div className="h-px w-10" style={{ background: "#378ADD" }} />
+              <div
+                className="h-px w-10"
+                style={{ background: "#378ADD" }}
+              />
+
               <span
                 className="text-xs font-bold tracking-[0.2em] uppercase"
                 style={{ color: "#378ADD" }}
@@ -65,7 +82,7 @@ export default function About() {
               className="text-[clamp(1.9rem,3.8vw,3rem)] font-bold tracking-tight leading-tight mb-6"
               style={{ color: "#042C53" }}
             >
-              Turning ideas into{" "}
+              Helping businesses turn{" "}
               <span
                 style={{
                   background:
@@ -74,24 +91,25 @@ export default function About() {
                   WebkitTextFillColor: "transparent",
                 }}
               >
-                digital reality.
+                ideas into growth.
               </span>
             </h2>
 
             <div
               className="flex flex-col gap-4 text-sm leading-relaxed mb-8"
-              style={{ color: "#6B7280" }}
+              style={{ color: "#475569" }}
             >
               <p>
-                I'm a full-stack developer passionate about building web
-                experiences that are fast, beautiful, and purposeful. My focus
-                is on solving real problems through clean code and thoughtful
-                design.
+                I help businesses grow by combining strategic thinking,
+                technology, and SaaS development. From building a strong
+                digital presence to developing scalable products, I focus on
+                solving real business challenges.
               </p>
+
               <p>
-                Whether it's a business website or a complex web application, I
-                bring the same level of care and craftsmanship to every project
-                — from the first line of code to the final deployment.
+                Whether you need a high-converting website, a complete
+                web application, or a SaaS product, I work closely with you
+                to turn ideas into practical, scalable solutions.
               </p>
             </div>
 
@@ -126,7 +144,10 @@ export default function About() {
                   delay: i * 0.1,
                   ease: [0.16, 1, 0.3, 1],
                 }}
-                whileHover={{ x: 4, transition: { duration: 0.2 } }}
+                whileHover={{
+                  x: 4,
+                  transition: { duration: 0.2 },
+                }}
                 className="group flex items-start gap-4 p-5 rounded-2xl cursor-default"
                 style={{
                   background: "#FFFFFF",
@@ -144,6 +165,7 @@ export default function About() {
                 >
                   {v.icon}
                 </div>
+
                 <div>
                   <h4
                     className="text-sm font-bold mb-1"
@@ -151,7 +173,11 @@ export default function About() {
                   >
                     {v.title}
                   </h4>
-                  <p className="text-sm leading-relaxed" style={{ color: "#6B7280" }}>
+
+                  <p
+                    className="text-sm leading-relaxed"
+                    style={{ color: "#475569" }}
+                  >
                     {v.description}
                   </p>
                 </div>
@@ -173,7 +199,11 @@ export default function About() {
                 className="w-2.5 h-2.5 rounded-full flex-shrink-0 animate-pulse"
                 style={{ background: "#22c55e" }}
               />
-              <p className="text-sm font-semibold" style={{ color: "#042C53" }}>
+
+              <p
+                className="text-sm font-semibold"
+                style={{ color: "#042C53" }}
+              >
                 Currently available for new projects
               </p>
             </motion.div>

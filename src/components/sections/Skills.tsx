@@ -3,275 +3,293 @@
 
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-
-const categories = [
-  {
-    label: "Frontend",
-    skills: ["JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS"],
-  },
-  {
-    label: "Backend",
-    skills: ["Node.js", "Express.js"],
-  },
-  {
-    label: "Database",
-    skills: ["MongoDB", "PostgreSQL"],
-  },
-  {
-    label: "Tools",
-    skills: ["Git", "GitHub", "VS Code", "Postman"],
-  },
-  {
-    label: "Design",
-    skills: ["Figma", "Canva"],
-  },
-];
+import {
+  TrendingUp,
+  Monitor,
+  Cloud,
+  ArrowUpRight,
+} from "lucide-react";
 
 const services = [
   {
-    
-    title: "Business Websites",
+    number: "01",
+    icon: <TrendingUp size={21} />,
+    title: "Business Growth",
     description:
-      "Modern websites designed to build credibility, attract visitors, and generate leads for your business.",
-    tags: ["Next.js", "Tailwind CSS", "Framer Motion"],
-    color: "#378ADD",
+      "Strategy, consulting, business development, and growth planning to help you identify opportunities and move your business forward.",
+    points: ["Growth Strategy", "Business Consulting", "Lead Generation"],
   },
   {
-    
-    title: "Web Applications",
+    number: "02",
+    icon: <Monitor size={21} />,
+    title: "Web & Technology",
     description:
-      "Custom web apps focused on usability, scalability, and performance — built for real users.",
-    tags: ["React", "Node.js", "MongoDB"],
-    color: "#185FA5",
+      "High-quality websites, React and Next.js web applications, e-commerce platforms, and custom software solutions built around your business.",
+    points: ["React", "Next.js", "Web Applications", "E-Commerce"],
   },
   {
-    
-    title: "Responsive Design",
+    number: "03",
+    icon: <Cloud size={21} />,
+    title: "SaaS Products",
     description:
-      "Pixel-perfect experiences optimized for every screen — desktop, tablet, and mobile.",
-    tags: ["CSS", "Tailwind CSS", "TypeScript"],
-    color: "#378ADD",
-  },
-  {
-  
-    title: "Performance First",
-    description:
-      "Fast-loading, SEO-friendly solutions built with modern best practices and clean architecture.",
-    tags: ["Next.js", "Vercel", "Optimization"],
-    color: "#185FA5",
+      "Scalable software-as-a-service products with secure architecture, subscription workflows, dashboards, and long-term growth in mind.",
+    points: ["SaaS Development", "Subscription Systems", "Scalable Architecture"],
   },
 ];
 
 export default function Skills() {
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.06 });
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.08,
+  });
 
   return (
     <section
       id="skills"
       ref={ref}
-      className="relative py-18 overflow-hidden"
+      className="relative py-24 overflow-hidden"
       style={{ background: "#F7F9FC" }}
     >
-      {/* bg blobs */}
+      {/* Background elements */}
       <div
-        className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full pointer-events-none"
+        className="absolute -top-40 -right-40 w-[550px] h-[550px] rounded-full pointer-events-none"
         style={{
           background:
-            "radial-gradient(circle, rgba(55,138,221,0.07) 0%, transparent 70%)",
-        }}
-      />
-      <div
-        className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full pointer-events-none"
-        style={{
-          background:
-            "radial-gradient(circle, rgba(24,95,165,0.05) 0%, transparent 70%)",
+            "radial-gradient(circle, rgba(55,138,221,0.08) 0%, transparent 68%)",
         }}
       />
 
-      <div className="max-w-6xl mx-auto px-6 lg:px-12">
+      <div
+        className="absolute -bottom-40 -left-40 w-[500px] h-[500px] rounded-full pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(circle, rgba(24,95,165,0.05) 0%, transparent 68%)",
+        }}
+      />
+
+      {/* Subtle grid */}
+      <div
+        className="absolute inset-0 pointer-events-none opacity-[0.018]"
+        style={{
+          backgroundImage:
+            "linear-gradient(#185FA5 1px, transparent 1px), linear-gradient(90deg, #185FA5 1px, transparent 1px)",
+          backgroundSize: "70px 70px",
+        }}
+      />
+
+      <div className="relative max-w-6xl mx-auto px-6 lg:px-12">
 
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 25 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="mb-16"
+          transition={{
+            duration: 0.65,
+            ease: [0.16, 1, 0.3, 1],
+          }}
+          className="max-w-3xl mb-14"
         >
-          <div className="flex items-center gap-3 mb-4">
-            <div className="h-px w-10" style={{ background: "#378ADD" }} />
+          <div className="flex items-center gap-3 mb-5">
+            <div
+              className="h-px w-10"
+              style={{ background: "#378ADD" }}
+            />
+
             <span
               className="text-xs font-bold tracking-[0.2em] uppercase"
               style={{ color: "#378ADD" }}
             >
-              Capabilities
+              What I Do
             </span>
           </div>
+
           <h2
-            className="text-[clamp(2rem,4vw,3.2rem)] font-bold tracking-tight leading-tight"
+            className="text-[clamp(2rem,4vw,3.4rem)] font-bold tracking-tight leading-[1.08] mb-5"
             style={{ color: "#042C53" }}
           >
-            Skills &{" "}
+            Everything your business needs to{" "}
             <span
               style={{
-                background: "linear-gradient(135deg, #378ADD 0%, #185FA5 100%)",
+                background:
+                  "linear-gradient(135deg, #378ADD 0%, #185FA5 100%)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
               }}
             >
-              What I Build
+              grow digitally.
             </span>
           </h2>
+
+          <p
+            className="max-w-2xl text-sm md:text-base leading-relaxed"
+            style={{ color: "#475569" }}
+          >
+            From business strategy and web technology to SaaS products,
+            I bring the right digital solutions together to help businesses
+            build, grow, and scale.
+          </p>
         </motion.div>
 
-        {/* Two col */}
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
-
-          {/* LEFT — skill pills */}
-          <div className="flex flex-col gap-8">
-            {categories.map((cat, ci) => (
-              <motion.div
-                key={cat.label}
-                initial={{ opacity: 0, y: 24 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{
-                  duration: 0.55,
-                  delay: ci * 0.08,
-                  ease: [0.16, 1, 0.3, 1],
+        {/* Services grid */}
+        <div className="grid md:grid-cols-2 gap-5">
+          {services.map((service, i) => (
+            <motion.div
+              key={service.number}
+              initial={{ opacity: 0, y: 30 }}
+              animate={
+                inView
+                  ? {
+                      opacity: 1,
+                      y: 0,
+                    }
+                  : {}
+              }
+              transition={{
+                duration: 0.6,
+                delay: i * 0.1,
+                ease: [0.16, 1, 0.3, 1],
+              }}
+              whileHover={{
+                y: -5,
+                transition: {
+                  duration: 0.25,
+                },
+              }}
+              className="group relative overflow-hidden rounded-3xl p-7 md:p-8"
+              style={{
+                background: "#FFFFFF",
+                border: "1px solid rgba(55,138,221,0.11)",
+                boxShadow: "0 4px 24px rgba(4,44,83,0.045)",
+              }}
+            >
+              {/* Hover glow */}
+              <div
+                className="absolute -top-24 -right-24 w-48 h-48 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+                style={{
+                  background:
+                    "radial-gradient(circle, rgba(55,138,221,0.11) 0%, transparent 70%)",
                 }}
-              >
-                {/* Category label */}
-                <div className="flex items-center gap-3 mb-3">
-                  <span
-                    className="text-[10px] font-bold tracking-[0.18em] uppercase px-2.5 py-1 rounded-full"
-                    style={{
-                      background: "rgba(55,138,221,0.08)",
-                      color: "#185FA5",
-                      border: "1px solid rgba(55,138,221,0.18)",
-                    }}
+              />
+
+              {/* Top row */}
+              <div className="relative flex items-center justify-between mb-8">
+                <div
+                  className="w-11 h-11 rounded-2xl flex items-center justify-center"
+                  style={{
+                    background: "rgba(55,138,221,0.08)",
+                    color: "#185FA5",
+                    border:
+                      "1px solid rgba(55,138,221,0.14)",
+                  }}
+                >
+                  {service.icon}
+                </div>
+
+                <span
+                  className="text-xs font-bold tracking-widest"
+                  style={{ color: "rgba(24,95,165,0.4)" }}
+                >
+                  {service.number}
+                </span>
+              </div>
+
+              {/* Content */}
+              <div className="relative">
+                <div className="flex items-start justify-between gap-4 mb-3">
+                  <h3
+                    className="text-xl font-bold tracking-tight"
+                    style={{ color: "#042C53" }}
                   >
-                    {cat.label}
-                  </span>
-                  <div
-                    className="h-px flex-1"
-                    style={{ background: "rgba(55,138,221,0.1)" }}
+                    {service.title}
+                  </h3>
+
+                  <ArrowUpRight
+                    size={19}
+                    className="flex-shrink-0 opacity-0 -translate-x-1 translate-y-1 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-300"
+                    style={{ color: "#378ADD" }}
                   />
                 </div>
 
-                {/* Pills */}
+                <p
+                  className="text-sm leading-relaxed mb-6"
+                  style={{ color: "#475569" }}
+                >
+                  {service.description}
+                </p>
+
+                {/* Service points */}
                 <div className="flex flex-wrap gap-2">
-                  {cat.skills.map((skill, si) => (
-                    <motion.span
-                      key={skill}
-                      initial={{ opacity: 0, scale: 0.88 }}
-                      animate={inView ? { opacity: 1, scale: 1 } : {}}
-                      transition={{
-                        duration: 0.35,
-                        delay: ci * 0.08 + si * 0.04,
-                        ease: [0.16, 1, 0.3, 1],
-                      }}
-                      whileHover={{
-                        y: -2,
-                        boxShadow: "0 6px 20px rgba(55,138,221,0.15)",
-                        transition: { duration: 0.15 },
-                      }}
-                      className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold cursor-default"
+                  {service.points.map((point) => (
+                    <span
+                      key={point}
+                      className="px-3 py-1.5 rounded-lg text-[11px] font-semibold"
                       style={{
-                        background: "#FFFFFF",
-                        border: "1.5px solid rgba(55,138,221,0.1)",
-                        color: "#042C53",
-                        boxShadow: "0 1px 8px rgba(4,44,83,0.04)",
+                        background: "#F7F9FC",
+                        color: "#185FA5",
+                        border:
+                          "1px solid rgba(55,138,221,0.1)",
                       }}
                     >
-                      <span
-                        className="w-1.5 h-1.5 rounded-full flex-shrink-0"
-                        style={{ background: "#378ADD" }}
-                      />
-                      {skill}
-                    </motion.span>
+                      {point}
+                    </span>
                   ))}
                 </div>
-              </motion.div>
-            ))}
-          </div>
+              </div>
 
-          {/* RIGHT — What I Build cards */}
-          <div className="flex flex-col gap-4">
-            {services.map((service, i) => (
-              <motion.div
-                key={service.title}
-                initial={{ opacity: 0, x: 30 }}
-                animate={inView ? { opacity: 1, x: 0 } : {}}
-                transition={{
-                  duration: 0.6,
-                  delay: 0.15 + i * 0.1,
-                  ease: [0.16, 1, 0.3, 1],
-                }}
-                whileHover={{
-                  x: 4,
-                  transition: { duration: 0.2 },
-                }}
-                className="group relative rounded-2xl p-6 overflow-hidden cursor-default"
+              {/* Bottom accent */}
+              <div
+                className="absolute bottom-0 left-7 right-7 h-px scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"
                 style={{
-                  background: "#FFFFFF",
-                  border: "1.5px solid rgba(55,138,221,0.1)",
-                  boxShadow: "0 2px 16px rgba(4,44,83,0.05)",
+                  background:
+                    "linear-gradient(90deg, #378ADD, transparent)",
                 }}
-              >
-                {/* Hover left accent bar */}
-                <div
-                  className="absolute left-0 top-4 bottom-4 w-0.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                  style={{
-                    background: `linear-gradient(to bottom, ${service.color}, transparent)`,
-                  }}
-                />
-
-                {/* Hover bg glow */}
-                <div
-                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-2xl"
-                  style={{
-                    background: `radial-gradient(circle at 0% 50%, ${service.color}08 0%, transparent 70%)`,
-                  }}
-                />
-
-                <div className="flex items-start gap-4 relative z-10">
-                  {/* Icon box */}
-                
-
-                  <div className="flex-1 min-w-0">
-                    <h4
-                      className="text-base font-bold mb-1.5 tracking-tight"
-                      style={{ color: "#042C53" }}
-                    >
-                      {service.title}
-                    </h4>
-                    <p
-                      className="text-sm leading-relaxed mb-3"
-                      style={{ color: "#6B7280" }}
-                    >
-                      {service.description}
-                    </p>
-
-                    {/* Tech tags */}
-                    <div className="flex flex-wrap gap-1.5">
-                      {service.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="text-[10px] font-bold px-2 py-0.5 rounded-md"
-                          style={{
-                            background: `${service.color}0f`,
-                            color: service.color,
-                          }}
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+              />
+            </motion.div>
+          ))}
         </div>
+
+        {/* Bottom statement */}
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{
+            duration: 0.6,
+            delay: 0.55,
+          }}
+          className="mt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5 px-6 py-5 rounded-2xl"
+          style={{
+            background: "rgba(55,138,221,0.045)",
+            border: "1px solid rgba(55,138,221,0.1)",
+          }}
+        >
+          <div>
+            <p
+              className="text-sm font-bold mb-1"
+              style={{ color: "#042C53" }}
+            >
+              One partner. Multiple growth solutions.
+            </p>
+
+            <p
+              className="text-xs"
+              style={{ color: "#475569" }}
+            >
+              Strategy, technology and SaaS solutions — working together.
+            </p>
+          </div>
+
+          <a
+            href="#contact"
+            className="group inline-flex items-center gap-2 text-sm font-bold whitespace-nowrap"
+            style={{ color: "#185FA5" }}
+          >
+            Discuss Your Business
+            <ArrowUpRight
+              size={16}
+              className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200"
+            />
+          </a>
+        </motion.div>
       </div>
     </section>
   );

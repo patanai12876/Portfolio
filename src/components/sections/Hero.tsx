@@ -69,7 +69,7 @@ export default function Hero() {
             }}
           >
             <Sparkles size={14} className="text-[#378ADD]" />
-            Full Stack Developer
+            Business Growth & Digital Solutions 
             <span className="w-2 h-2 rounded-full bg-[#378ADD] animate-pulse" />
           </span>
         </motion.div>
@@ -82,7 +82,7 @@ export default function Hero() {
           className="text-[clamp(2.6rem,6vw,5.2rem)] font-extrabold leading-[1.0] tracking-tight mb-6"
           style={{ color: "#042C53" }}
         >
-          Building Fast, Scalable{" "}
+          Helping Businesses{" "}
           <span
             className="relative inline-block"
             style={{
@@ -91,10 +91,10 @@ export default function Hero() {
               WebkitTextFillColor: "transparent",
             }}
           >
-            &amp; Beautiful
+             Grow &amp; Scale
           </span>
           <br />
-          Web Experiences
+          in the Digital World
         </motion.h1>
 
         {/* Typewriter */}
@@ -102,29 +102,51 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.5 }}
-          className="flex items-center justify-center gap-3 mb-6 text-[clamp(1rem,2vw,1.35rem)]"
-          style={{ color: "#185FA5" }}
+          className="mb-6 flex justify-center text-[clamp(1rem,2vw,1.35rem)]"
+          style={{ color: "#185FA5", width: "100%" }}
         >
-          <span className="font-medium" style={{ color: "#6B7280" }}>
-            I build
-          </span>
-          <span className="font-bold" style={{ color: "#378ADD", minWidth: "260px", textAlign: "left" }}>
-            <TypeAnimation
-              sequence={[
-                "Business Websites",
-                2000,
-                "Web Applications",
-                2000,
-                "Modern User Experiences",
-                2000,
-                "Custom Digital Solutions",
-                2000,
-              ]}
-              wrapper="span"
-              speed={50}
-              repeat={Infinity}
-            />
-          </span>
+          <div
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: "0.5rem",
+              margin: "0 auto",
+              textAlign: "center",
+            }}
+          >
+            <span className="font-medium" style={{ color: "#475569" }}>
+              I build
+            </span>
+            <span
+              className="font-bold"
+              style={{
+                color: "#378ADD",
+                minWidth: "clamp(210px, 24vw, 340px)",
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                textAlign: "center",
+                whiteSpace: "nowrap",
+              }}
+            >
+              <TypeAnimation
+                sequence={[
+                  "Custom Websites",
+                  2000,
+                  "Web Applications",
+                  2000,
+                  "SaaS Products",
+                  2000,
+                  "End to End Digital Solutions",
+                  2000,
+                ]}
+                wrapper="span"
+                speed={50}
+                repeat={Infinity}
+              />
+            </span>
+          </div>
         </motion.div>
 
         {/* Description */}
@@ -133,10 +155,11 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.65 }}
           className="max-w-xl mx-auto text-base leading-relaxed mb-10 font-medium"
-          style={{ color: "#6B7280" }}
+          style={{ color: "#475569" }}
         >
-          I design and develop high-quality web solutions that help businesses
-          grow online — from sleek landing pages to full-scale web applications.
+          I help businesses turn ideas into growth through smart strategy,
+          modern technology, and scalable SaaS solutions, all tailored to
+          build a stronger and more competitive business.
         </motion.p>
 
         {/* CTAs */}
@@ -187,7 +210,7 @@ export default function Hero() {
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
             className="flex flex-col items-center gap-2"
           >
-            <span className="text-xs tracking-widest uppercase font-medium" style={{ color: "#6B7280" }}>
+            <span className="text-xs tracking-widest uppercase font-medium" style={{ color: "#475569" }}>
               Scroll
             </span>
             <div

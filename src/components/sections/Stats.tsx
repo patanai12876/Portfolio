@@ -7,33 +7,36 @@ import CountUp from "react-countup";
 
 const stats = [
   {
-    value: 5,
-    suffix: "+",
-    label: "Projects Built",
-    description: "Real-world apps delivered",
-  },
-  {
-    value: null,
-    text: "Full Stack",
-    label: "Development",
-    description: "Frontend to backend",
-  },
-  {
-    value: null,
-    text: "Modern",
-    label: "Tech Stack",
-    description: "Next.js · TypeScript · Tailwind",
-  },
-  {
     value: 100,
     suffix: "%",
     label: "Responsive",
-    description: "Every screen, every device",
+    description: "Layouts built for every screen",
+  },
+  {
+    value: null,
+    text: "Mobile",
+    label: "Mobile Friendly",
+    description: "Smooth experience on every device",
+  },
+  {
+    value: null,
+    text: "React",
+    label: "Modern Development",
+    description: "React · Next.js · TypeScript",
+  },
+  {
+    value: null,
+    text: "Fast",
+    label: "Performance Focused",
+    description: "Clean, fast and scalable builds",
   },
 ];
 
 export default function Stats() {
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.15 });
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.15,
+  });
 
   return (
     <section
@@ -46,6 +49,7 @@ export default function Stats() {
         className="absolute top-0 left-0 right-0 h-px"
         style={{ background: "rgba(55,138,221,0.1)" }}
       />
+
       {/* subtle divider bottom */}
       <div
         className="absolute bottom-0 left-0 right-0 h-px"
@@ -53,7 +57,8 @@ export default function Stats() {
       />
 
       <div className="max-w-6xl mx-auto px-6 lg:px-12">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-px overflow-hidden rounded-2xl"
+        <div
+          className="grid grid-cols-2 lg:grid-cols-4 gap-px overflow-hidden rounded-2xl"
           style={{ background: "rgba(55,138,221,0.08)" }}
         >
           {stats.map((stat, i) => (
@@ -82,7 +87,8 @@ export default function Stats() {
               <div
                 className="text-4xl font-bold leading-none mb-2 tracking-tight"
                 style={{
-                  background: "linear-gradient(135deg, #378ADD 0%, #185FA5 100%)",
+                  background:
+                    "linear-gradient(135deg, #378ADD 0%, #185FA5 100%)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                 }}
@@ -96,7 +102,9 @@ export default function Stats() {
                       suffix={stat.suffix ?? ""}
                     />
                   ) : (
-                    <span>0{stat.suffix}</span>
+                    <span>
+                      0{stat.suffix}
+                    </span>
                   )
                 ) : (
                   stat.text
@@ -114,7 +122,7 @@ export default function Stats() {
               {/* description */}
               <div
                 className="text-xs font-normal leading-relaxed"
-                style={{ color: "#6B7280" }}
+                style={{ color: "#475569" }}
               >
                 {stat.description}
               </div>

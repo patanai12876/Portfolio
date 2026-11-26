@@ -86,13 +86,13 @@ export default function Navbar() {
                 background: "linear-gradient(135deg, #378ADD 0%, #185FA5 100%)",
               }}
             >
-              W
+              N
             </div>
             <span
               className="text-base font-extrabold tracking-tight"
               style={{ color: "#042C53" }}
             >
-              Web{" "}
+              Noor{" "}
               <span
                 style={{
                   background: "linear-gradient(135deg, #378ADD, #185FA5)",
@@ -100,7 +100,7 @@ export default function Navbar() {
                   WebkitTextFillColor: "transparent",
                 }}
               >
-                Decoded
+                Fatima
               </span>
             </span>
           </a>
@@ -115,7 +115,7 @@ export default function Navbar() {
                   onClick={() => handleClick(link.href)}
                   className="relative px-4 py-2 rounded-xl text-sm font-semibold transition-colors duration-200"
                   style={{
-                    color: isActive ? "#185FA5" : "#6B7280",
+                    color: isActive ? "#185FA5" : "#475569",
                     background: isActive
                       ? "rgba(55,138,221,0.08)"
                       : "transparent",

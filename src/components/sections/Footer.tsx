@@ -12,9 +12,7 @@ const links = [
 ];
 
 const socials = [
-  {  icon: <Mail size={16} />, href: "https://github.com/yourusername", label: "GitHub" },
-  {  icon: <Mail size={16} />,  href: "https://linkedin.com/in/yourhandle", label: "LinkedIn" },
-  { icon: <Mail size={16} />, href: "mailto:your@email.com", label: "Email" },
+  { icon: <Mail size={16} />, href: "mailto:zainabfatyma38@gmail.com", label: "Email" },
 ];
 
 export default function Footer() {
@@ -69,13 +67,13 @@ export default function Footer() {
                 W
               </div>
               <span className="text-base font-bold tracking-tight text-white">
-                Web{" "}
-                <span style={{ color: "#378ADD" }}>Decoded</span>
+                Noor{" "}
+                <span style={{ color: "#378ADD" }}>Fatima</span>
               </span>
             </div>
             <p
               className="text-xs leading-relaxed text-center md:text-left max-w-[200px]"
-              style={{ color: "rgba(255,255,255,0.4)" }}
+              style={{ color: "rgba(255,255,255,0.75)" }}
             >
               Building fast, scalable & beautiful web experiences.
             </p>
@@ -91,7 +89,7 @@ export default function Footer() {
           >
             <span
               className="text-[10px] font-bold tracking-[0.18em] uppercase"
-              style={{ color: "rgba(255,255,255,0.35)" }}
+              style={{ color: "rgba(255,255,255,0.75)" }}
             >
               Quick Links
             </span>
@@ -101,7 +99,7 @@ export default function Footer() {
                 onClick={() => scrollTo(link.href)}
                 className="text-sm font-medium transition-colors duration-200 hover:text-white"
                 style={{
-                  color: "rgba(255,255,255,0.55)",
+                  color: "rgba(255,255,255,0.8)",
                   background: "none",
                   border: "none",
                   cursor: "pointer",
@@ -123,7 +121,7 @@ export default function Footer() {
           >
             <span
               className="text-[10px] font-bold tracking-[0.18em] uppercase"
-              style={{ color: "rgba(255,255,255,0.35)" }}
+              style={{ color: "rgba(255,255,255,0.75)" }}
             >
               Connect
             </span>
@@ -139,7 +137,7 @@ export default function Footer() {
                   style={{
                     background: "rgba(55,138,221,0.12)",
                     border: "1px solid rgba(55,138,221,0.2)",
-                    color: "rgba(255,255,255,0.65)",
+                    color: "rgba(255,255,255,0.8)",
                   }}
                 >
                   {s.icon}
@@ -155,7 +153,7 @@ export default function Footer() {
               />
               <span
                 className="text-xs font-medium"
-                style={{ color: "rgba(255,255,255,0.45)" }}
+                style={{ color: "rgba(255,255,255,0.75)" }}
               >
                 Open for new projects
               </span>
@@ -170,13 +168,13 @@ export default function Footer() {
         >
           <p
             className="text-xs"
-            style={{ color: "rgba(255,255,255,0.3)" }}
+            style={{ color: "rgba(255,255,255,0.75)" }}
           >
-            © {new Date().getFullYear()} Web Decoded. All rights reserved.
+            © {new Date().getFullYear()} Noor Fatima. All rights reserved.
           </p>
           <p
             className="text-xs"
-            style={{ color: "rgba(255,255,255,0.3)" }}
+            style={{ color: "rgba(255,255,255,0.75)" }}
           >
             Built with Next.js · Tailwind CSS · Framer Motion
           </p>
